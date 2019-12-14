@@ -8,7 +8,7 @@ class baixi:
     # 初始化
     def __init__(self):
         self.pd = pd
-        self.deal_data = pd.read_excel(r'C:\Users\daojia\Desktop\学习\work\Sample.xlsx', sheet_name='CQL')
+        self.deal_data = pd.read_excel(r'C:\Users\daojia\Desktop\学习\work\Sample_bx.xlsx', sheet_name='Sheet1')
 
     # 转置过程，将null 值全部删除，重建。很值得学习
     # 真是精华所在,巧妙令人叹为观之,看来还是要面向stockflow
@@ -30,7 +30,7 @@ class baixi:
         out_data = data.apply(self.squeeze_nan, axis=1)
         # 保存数据
         print(data)
-        out_data.to_excel(r'C:\Users\daojia\Desktop\学习\Sample123.xlsx')
+        out_data.to_excel(r'C:\Users\daojia\Desktop\学习\Sample_y.xlsx')
 
         # return out_data
 
